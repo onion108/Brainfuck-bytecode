@@ -254,9 +254,16 @@ class VirtualMachine {
 int main(int argc, char** argv) {
 	if(argc == 2) {
 		ifstream ifs(argv[1]);
+		if(ifs.fail()) {
+			cout << "File doesn't exist: " << argv[1];
+			return 1;
+		}
 		VirtualMachine vm;
 		vm.initMachine();
 		vm.exec(ifs);
+	} else {
+		cout << "Help: \n";
+		cout << argv[0] << " [input file] [output file]\n";
 	}
 	return 0;
 }

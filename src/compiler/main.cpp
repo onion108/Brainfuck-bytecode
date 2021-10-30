@@ -6,6 +6,10 @@ int main(int argc, char** argv) {
 	if(argc == 3) {
 		ifstream input_file(argv[1]);
 		ofstream output_file(argv[2]);
+		if(input_file.fail()) {
+			cerr << "Input file doesn't exist: " << argv[1];
+			return 1;
+		}
 		output_file << "\x27\x26\x4A";
 		output_file.put(0);
 		while(!input_file.eof()) {
@@ -42,6 +46,9 @@ int main(int argc, char** argv) {
 					break;
 			}
 		}
+	} else {
+		cout << "Usage: ";
+		cout << endl << argv[0] << " [input file] [output file]\n";
 	}
 	return 0;
 }
