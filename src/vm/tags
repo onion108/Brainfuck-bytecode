@@ -1,0 +1,88 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BF_DEC	main.cpp	/^const int BF_DEC = 0x1B;    \/\/ -$/;"	v
+BF_FLAG	main.cpp	/^const int BF_FLAG = 0x1E;   \/\/ [$/;"	v
+BF_INC	main.cpp	/^const int BF_INC = 0x1A;    \/\/ +$/;"	v
+BF_INPUT	main.cpp	/^const int BF_INPUT = 0x19;  \/\/ ,$/;"	v
+BF_JNZ	main.cpp	/^const int BF_JNZ = 0x1F;    \/\/ ]$/;"	v
+BF_LSHIFT	main.cpp	/^const int BF_LSHIFT = 0x1D; \/\/ <$/;"	v
+BF_NOP	main.cpp	/^const int BF_NOP = 0x00;    \/\/ (no character to present)$/;"	v
+BF_OUTPUT	main.cpp	/^const int BF_OUTPUT = 0x18; \/\/ .$/;"	v
+BF_RSHIFT	main.cpp	/^const int BF_RSHIFT = 0x1C; \/\/ >$/;"	v
+EBF_CALL	main.cpp	/^const int EBF_CALL = 0x22;$/;"	v
+EBF_EXIT	main.cpp	/^const int EBF_EXIT = 0x21;$/;"	v
+EBF_POP	main.cpp	/^const int EBF_POP = 0x25;$/;"	v
+EBF_PUSH	main.cpp	/^const int EBF_PUSH = 0x24;$/;"	v
+EBF_RAND	main.cpp	/^const int EBF_RAND = 0x20;$/;"	v
+EBF_RET	main.cpp	/^const int EBF_RET = 0x23;$/;"	v
+VirtualMachine	main.cpp	/^class VirtualMachine {$/;"	c	file:
+VirtualMachine::_assertIfEof	main.cpp	/^		void _assertIfEof(istream& is) { \/\/ I mean, assert if not eof... welp i'm too lazy to change the name since it is a private method$/;"	f	class:VirtualMachine	file:	access:private	signature:(istream& is)
+VirtualMachine::_assertIfNotEqual	main.cpp	/^		void _assertIfNotEqual(int a, int b, string errorMessage) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(int a, int b, string errorMessage)
+VirtualMachine::_bf_dec	main.cpp	/^		bool _bf_dec(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_flag	main.cpp	/^		bool _bf_flag(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_inc	main.cpp	/^		bool _bf_inc(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_input	main.cpp	/^		bool _bf_input(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_jnz	main.cpp	/^		bool _bf_jnz(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_lshift	main.cpp	/^		bool _bf_lshift(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_output	main.cpp	/^		bool _bf_output(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_bf_rshift	main.cpp	/^		bool _bf_rshift(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+VirtualMachine::_noEofRead	main.cpp	/^		int _noEofRead(istream& is) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(istream& is)
+VirtualMachine::call	main.cpp	/^		void call(int newpc) {$/;"	f	class:VirtualMachine	access:public	signature:(int newpc)
+VirtualMachine::callStack	main.cpp	/^		stack<int> callStack;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::commands	main.cpp	/^		map<int, function<bool(VirtualMachine&)>> commands;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::defaultStack	main.cpp	/^		stack<int> defaultStack;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::exec	main.cpp	/^		void exec(istream& bytecode) {$/;"	f	class:VirtualMachine	access:public	signature:(istream& bytecode)
+VirtualMachine::flagStack	main.cpp	/^		stack<int> flagStack;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::getCurrent	main.cpp	/^		int getCurrent() {$/;"	f	class:VirtualMachine	access:public	signature:()
+VirtualMachine::getLastRunnedProgramVersion	main.cpp	/^		int getLastRunnedProgramVersion() {$/;"	f	class:VirtualMachine	access:public	signature:()
+VirtualMachine::getPc	main.cpp	/^		int getPc() {$/;"	f	class:VirtualMachine	access:public	signature:()
+VirtualMachine::initMachine	main.cpp	/^		void initMachine() {$/;"	f	class:VirtualMachine	access:public	signature:()
+VirtualMachine::lastRunnedProgramVersion	main.cpp	/^		int lastRunnedProgramVersion = -1;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::memory	main.cpp	/^		vector<int> memory;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::memoryIndex	main.cpp	/^		int memoryIndex = 0;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::pc	main.cpp	/^		int pc;$/;"	m	class:VirtualMachine	file:	access:private
+VirtualMachine::pop	main.cpp	/^		int pop() {$/;"	f	class:VirtualMachine	access:public	signature:()
+VirtualMachine::push	main.cpp	/^		void push(int n) {$/;"	f	class:VirtualMachine	access:public	signature:(int n)
+VirtualMachine::registCommand	main.cpp	/^		void registCommand(int byte, function<bool(VirtualMachine&)> handler) {$/;"	f	class:VirtualMachine	access:public	signature:(int byte, function<bool(VirtualMachine&)> handler)
+VirtualMachine::ret	main.cpp	/^		void ret() {$/;"	f	class:VirtualMachine	access:public	signature:()
+VirtualMachine::runCommandIfExist	main.cpp	/^		bool runCommandIfExist(int byte) {$/;"	f	class:VirtualMachine	access:public	signature:(int byte)
+VirtualMachine::setCurrent	main.cpp	/^		void setCurrent(int value) {$/;"	f	class:VirtualMachine	access:public	signature:(int value)
+VirtualMachine::setPc	main.cpp	/^		void setPc(int newpc) {$/;"	f	class:VirtualMachine	access:public	signature:(int newpc)
+_assertIfEof	main.cpp	/^		void _assertIfEof(istream& is) { \/\/ I mean, assert if not eof... welp i'm too lazy to change the name since it is a private method$/;"	f	class:VirtualMachine	file:	access:private	signature:(istream& is)
+_assertIfNotEqual	main.cpp	/^		void _assertIfNotEqual(int a, int b, string errorMessage) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(int a, int b, string errorMessage)
+_bf_dec	main.cpp	/^		bool _bf_dec(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_flag	main.cpp	/^		bool _bf_flag(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_inc	main.cpp	/^		bool _bf_inc(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_input	main.cpp	/^		bool _bf_input(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_jnz	main.cpp	/^		bool _bf_jnz(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_lshift	main.cpp	/^		bool _bf_lshift(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_output	main.cpp	/^		bool _bf_output(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_bf_rshift	main.cpp	/^		bool _bf_rshift(VirtualMachine& self) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(VirtualMachine& self)
+_noEofRead	main.cpp	/^		int _noEofRead(istream& is) {$/;"	f	class:VirtualMachine	file:	access:private	signature:(istream& is)
+call	main.cpp	/^		void call(int newpc) {$/;"	f	class:VirtualMachine	access:public	signature:(int newpc)
+callStack	main.cpp	/^		stack<int> callStack;$/;"	m	class:VirtualMachine	file:	access:private
+commands	main.cpp	/^		map<int, function<bool(VirtualMachine&)>> commands;$/;"	m	class:VirtualMachine	file:	access:private
+defaultStack	main.cpp	/^		stack<int> defaultStack;$/;"	m	class:VirtualMachine	file:	access:private
+exec	main.cpp	/^		void exec(istream& bytecode) {$/;"	f	class:VirtualMachine	access:public	signature:(istream& bytecode)
+flagStack	main.cpp	/^		stack<int> flagStack;$/;"	m	class:VirtualMachine	file:	access:private
+format	tags	/^!_TAG_FILE_FORMAT	2	\/extended format; --format=1 will not append ;" to lines\/$/;"	v
+getCurrent	main.cpp	/^		int getCurrent() {$/;"	f	class:VirtualMachine	access:public	signature:()
+getLastRunnedProgramVersion	main.cpp	/^		int getLastRunnedProgramVersion() {$/;"	f	class:VirtualMachine	access:public	signature:()
+getPc	main.cpp	/^		int getPc() {$/;"	f	class:VirtualMachine	access:public	signature:()
+initMachine	main.cpp	/^		void initMachine() {$/;"	f	class:VirtualMachine	access:public	signature:()
+lastRunnedProgramVersion	main.cpp	/^		int lastRunnedProgramVersion = -1;$/;"	m	class:VirtualMachine	file:	access:private
+main	main.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+memory	main.cpp	/^		vector<int> memory;$/;"	m	class:VirtualMachine	file:	access:private
+memoryIndex	main.cpp	/^		int memoryIndex = 0;$/;"	m	class:VirtualMachine	file:	access:private
+pc	main.cpp	/^		int pc;$/;"	m	class:VirtualMachine	file:	access:private
+pop	main.cpp	/^		int pop() {$/;"	f	class:VirtualMachine	access:public	signature:()
+push	main.cpp	/^		void push(int n) {$/;"	f	class:VirtualMachine	access:public	signature:(int n)
+registCommand	main.cpp	/^		void registCommand(int byte, function<bool(VirtualMachine&)> handler) {$/;"	f	class:VirtualMachine	access:public	signature:(int byte, function<bool(VirtualMachine&)> handler)
+ret	main.cpp	/^		void ret() {$/;"	f	class:VirtualMachine	access:public	signature:()
+runCommandIfExist	main.cpp	/^		bool runCommandIfExist(int byte) {$/;"	f	class:VirtualMachine	access:public	signature:(int byte)
+setCurrent	main.cpp	/^		void setCurrent(int value) {$/;"	f	class:VirtualMachine	access:public	signature:(int value)
+setPc	main.cpp	/^		void setPc(int newpc) {$/;"	f	class:VirtualMachine	access:public	signature:(int newpc)
