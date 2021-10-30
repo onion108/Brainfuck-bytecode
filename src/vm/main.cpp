@@ -32,6 +32,7 @@ class VirtualMachine {
 	private:
 		map<int, function<bool(VirtualMachine&)>> commands;
 		int pc;
+		int specialState;                // Special State: Allows multiple bytes
 		void _assertIfEof(istream& is) { // I mean, assert if not eof... welp i'm too lazy to change the name since it is a private method
 			if(is.eof()) {
 				cerr << "Unexpected EOF while executing the bytecode. Terminated.";
@@ -248,6 +249,12 @@ class VirtualMachine {
 			} else {
 				this->memory[this->memoryIndex] = value;
 			}
+		}
+		void setSpecialState(int newState) {
+			specialState = newState;
+		}
+		int getSpecialState(void) {
+			return specialState;
 		}
 };
 
