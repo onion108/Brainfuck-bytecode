@@ -57,3 +57,13 @@ v - Push the value in the current pointed memory to the stack.
 ~ - Return the from the function.
 ```
 
+### Extracting VM
+
+Just copy the class VirtualMachine and some related constants(BF_\* and EBF_\*) to your code. Don't forget to execute the method `VirtualMachine::initMachine()` before you start to execute the Brainfuck/Extended Brainfuck!(Use `VirtualMachine::exec(istream&)` to execute the bytecode;the `istream&` is a istream to the bytecode, such as a ifstream to the bytecode file, or a stringstream to the bytecode, etc.)
+
+### Plans
+TODO: <br>
+- Supports more advanced functions such as, multiple-byte based commands, and allows the compiler set a memory directly via a two-byte commands;
+- Preparing for a new assembly-like and brainfuck-based programming language called "Brainfuck++". I'll create a new repo for it. It can be compiled to the Brainfuck Bytecode or (maybe) the Extended Brainfuck Source Code.
+- Supports more functions via the file header (Therefore, the file header will not always 4 bytes in later versions. I'm planning to extend it into maybe 16 bytes.)
+
